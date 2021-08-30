@@ -1,24 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-import Page from './components/Page';
+import Counter from './components/Counter';
+import Todos from './components/Todos';
 
-export default function App () {
-
-  const [state, setState] = useState({
-    count : 0,
-  });
-
-  const {count } = state;
-
-  function handleClick (increment) {
-    setState({
-      count: count + increment,
-    })
-  }
+const App = () => {
   return(
     <div>
-      <h1>Counter</h1>
-      <Page count={count} onClick={handleClick} />
+      <Counter number={0}/>
+      <Todos/>
     </div>
   )
 }
+
+export default App;
